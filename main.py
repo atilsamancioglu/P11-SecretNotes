@@ -28,11 +28,11 @@ def save_and_encrypt_notes():
     message = input_text.get("1.0",END)
     master_secret = master_secret_input.get()
 
-    message_encrypted = encode(master_secret,message)
-
     if len(title) == 0 or len(message) == 0 or len(master_secret) == 0:
             messagebox.showinfo(title="Error!", message="Please enter all information.")
     else:
+        message_encrypted = encode(master_secret, message)
+
         try:
             with open("mysecret.txt", "a") as data_file:
                 data_file.write(f'\n{title}\n{message_encrypted}')
