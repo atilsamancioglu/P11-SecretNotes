@@ -63,7 +63,7 @@ def decrypt_notes():
 #UI
 
 window = Tk()
-window.title("Password Manager")
+window.title("Secret Notes")
 window.config(padx=30, pady=30)
 
 canvas = Canvas(height=200, width=200)
